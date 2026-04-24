@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "@radix-ui/themes/styles.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-primary: #3b82f6;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  .transition-theme {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+}
