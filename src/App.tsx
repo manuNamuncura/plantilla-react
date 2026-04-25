@@ -97,8 +97,8 @@ function App() {
                 <Text color="gray">
                   React Query listo para cachear peticiones.
                 </Text>
-                <div className="h-24 w-full">
-                  <ResponsiveContainer width="100%" height="100%">
+                <div className="w-full">
+                  <ResponsiveContainer width="100%" height={94}>
                     <BarChart data={DATA_MOCK}>
                       <Bar
                         dataKey="level"
