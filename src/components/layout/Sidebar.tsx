@@ -27,16 +27,21 @@ export function Sidebar() {
           radius="full"
           variant="soft"
           onClick={toggle}
-          className="p-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800"
+          className="p-3 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800"
         >
           <ChevronLeft
-            size={18}
+            size={20}
             className={cn("transition-transform", !isOpen && "rotate-180")}
           />
         </IconButton>
       </div>
       {/* NAV */}
-      <nav className="flex-1 space-y-1 p-3">
+      <nav
+        className={cn(
+          "flex-1 space-y-1 p-3",
+          !isOpen && "flex flex-col items-center p-2",
+        )}
+      >
         <SidebarItem
           to="/"
           icon={LayoutDashboard}
